@@ -1,0 +1,95 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-olive: var(--olive);
+  --color-olive-deep: var(--olive-deep);
+  --color-terracotta: var(--terracotta);
+  --color-burgundy: var(--burgundy);
+  --color-sand: var(--sand);
+  --color-vanilla: var(--vanilla);
+  --color-clay: var(--clay);
+  --color-charcoal: var(--charcoal);
+
+  --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), ui-serif, Georgia, serif;
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+}
+
+:root {
+  color-scheme: light;
+
+  --background: #fbf7ee;
+  --foreground: #221f1a;
+  --card: #fefcf7;
+  --card-foreground: #221f1a;
+  --popover: #fefcf7;
+  --popover-foreground: #221f1a;
+  --primary: #545943;
+  --primary-foreground: #fbf7ee;
+  --secondary: #f1ead9;
+  --secondary-foreground: #3a3630;
+  --muted: #f1ead9;
+  --muted-foreground: #6e6558;
+  --accent: #c0703c;
+  --accent-foreground: #fffdf8;
+  --destructive: #8a2b2b;
+  --border: #e4dac6;
+  --input: #e4dac6;
+  --ring: #c0703c;
+  --radius: 0.5rem;
+
+  --olive: #545943;
+  --olive-deep: #3b3f2f;
+  --terracotta: #c0703c;
+  --burgundy: #7c2432;
+  --sand: #ece2cf;
+  --vanilla: #f4eee0;
+  --clay: #8a5a3b;
+  --charcoal: #3d3a35;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--sand);
+    color: var(--olive-deep);
+  }
+}
+
+@utility hairline {
+  height: 1px;
+  background: linear-gradient(to right, var(--terracotta), transparent);
+}
